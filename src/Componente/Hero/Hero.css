@@ -1,0 +1,203 @@
+
+.heroscetion{
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.heroscetion::after,
+.heroscetion::before{
+    content: "";
+    width: 28.125rem;
+    height: 28.125rem;
+    border-radius: 28.125rem;
+    background: #7c66e3;
+    position: absolute;
+    z-index: -1;
+    filter: blur(225px);
+}
+
+.heroscetion::after{
+    top: -3rem;
+    left: -5rem;
+}
+
+.heroscetion::before{
+    bottom: 2rem;
+    right: 0rem;
+}
+
+.herocontainer{
+    flex: 1;
+}
+
+.herocontainer h2{
+    font-size: 3.8rem;
+    font-weight: 600;
+    line-height: 5rem;
+    margin-bottom: 1rem;
+}
+
+.herocontainer p{
+    width: 80%;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1rem;
+}
+
+.heroimg{
+    flex: 1;
+    display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 5rem;
+
+}
+
+  img{
+    width: 460px;
+    height: 460px;
+    /* border-radius: 30; */
+    object-fit: contain;
+}
+
+
+
+.heroimg > div{
+    display: flex;
+    align-items: flex-end;
+    gap: 2rem;
+}
+
+.heroimg > div > img{
+    width: 25rem;
+    transition: all 0.3s ease;
+}
+
+.icons{
+    width: 5rem;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 0.65rem;
+    border: 1.5px solid #6852ba;
+}
+
+.icons img{
+    width: 3rem;
+    height: auto;
+    transition: all 0.3s ease;
+    
+}
+
+.heroimg > div > img:hover,
+.icons img:hover{
+    transform: translateY(0.5rem);
+}
+
+@media(max-width:1020px){
+
+    .herocontainer h2{
+        font-size: 3rem;
+        line-height: 4rem;
+    }
+
+    .herocontainer p{
+        font-size: 0.9rem;
+        line-height: 1.6rem;
+
+    }
+
+    .heroimg > div > img{
+        width: 20rem;
+       
+    }
+
+    .icons{
+        width: 4rem;
+        height: 4rem;
+    }
+
+    .icons img{
+        width: 2.5rem;
+    }
+
+}
+
+
+@media(max-width:768px){
+    .heroscetion{
+        flex-direction: column;
+    }
+    .heroimg{
+        margin: 2rem 2rem 0;
+    }
+
+    .heroscetion h2{
+        margin-top: 3rem;
+    }
+
+    .herocontainer h2,
+    .herocontainer p{
+        width: auto;
+        text-align: center;
+    }
+
+    .herocontainer::after,
+    .herocontainer::before{
+        content: "";
+        width: 18rem;
+        height: 18rem;
+    }
+
+    .herocontainer::after{
+        top: 0rem;
+        left: 0rem;
+
+    }
+
+    .herocontainer::before{
+        bottom: 2rem;
+        right: 0rem;
+    }
+
+}
+
+
+@media(max-width:600px){
+
+    .herocontainer h2{
+        font-size: 2.2rem;
+        line-height: 3rem;
+    }
+
+    .herocontainer p{
+        font-size: 0.3rem;
+        line-height: 1.3rem;
+    }
+    
+    .heroimg{
+        gap: 1rem;
+    }
+
+    .heroimg > div{
+        gap: 1rem;
+    }
+
+    .heroimg > div > img{
+        width: 16rem;
+    }
+
+    .icons{
+        width: 3.3rem;
+        height: 3.3rem;
+    }
+
+    .icons img{
+        width: 2rem;
+    }
+
+}

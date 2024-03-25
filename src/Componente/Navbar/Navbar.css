@@ -1,0 +1,150 @@
+
+
+
+.nav{
+    background: rgba(0, 0, 0, 0.1);
+    padding: 10px 10px;
+    position: sticky;
+    top: 0;
+    z-index: 30;
+    backdrop-filter: blur(50px);
+
+
+}
+
+.wrapper{
+    width: 100%;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    /* padding: 0rem 0; */
+
+}
+
+
+
+
+.wrapper ul{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    list-style: none;
+}
+
+ .menu{
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 500;
+    color: #fff;
+    position: relative;
+    cursor: pointer;
+}
+
+.menu:hover{
+    border-bottom: 2px solid #a993fe;
+}
+
+.mobilenav{
+    display: none;
+}
+
+
+
+.menu::before{
+content: "";
+width: 2rem;
+height: 0.2rem;
+background: linear-gradient(90deg, #a993fe 0%, #7e61e7 100%, );
+border-radius: o.5rem;
+position: absolute;
+bottom: -0.6rem;
+opacity:0;
+transform: translate(-1.5rem);
+transition: all 0.3s ease;
+
+}
+
+.menu:hover::before{
+    width: 100%;
+    transform: translatex(0);
+    opacity: 1;
+}
+
+
+  .contact{
+    font-size: 0.9rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:#fff;
+    background:linear-gradient(90deg, #a993fe 0%, #7e61e7 100%, ) ;
+    padding: 0.6rem 2rem;
+    border: none;
+    outline: 0.5px solid transparent;
+    border-radius: 0.2rem;
+    cursor: pointer;
+    transition: all 0.3 ease;
+
+}
+
+ .contact:hover{
+   
+    color: #a993fe;
+    background: #000;
+    border-bottom: 2px solid red;
+    outline:  1.5px solid #a993fe;
+}
+
+.btn{
+    width: 120px;
+    height: 40px;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 0.4rem;
+    color: #fff;
+    background:#2B2358 ;
+    line-height: 0;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    display: none;
+}
+button{
+    background:#2B2358 ;
+    color: #fff;
+}
+
+
+.btn:hover{
+    color: #a993fe;
+    background: #000;
+    border: 1px solid #a993fe;
+}
+
+@media (max-width:813px){
+
+    .btn{
+        display: block;
+        /* padding: 10px 10px; */
+    }
+
+    .mobilenav{
+        display: block;
+    }
+
+
+    .wrapper ul {
+        display: none;
+    }
+
+    
+}
+
+@media (max-width:1200px){
+    .wrapper{
+        padding:0 2rem;
+    }
+}
